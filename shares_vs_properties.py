@@ -19,7 +19,8 @@ import matplotlib.pyplot as plt
 # import numpy as np
 # from data.create_data import create_table
 
-data_dir = 'C:/Users/sheld/OneDrive/Documents/PortfolioOpt/Data/'
+#data_dir = 'C:/Users/sheld/OneDrive/Documents/PortfolioOpt/Data/'
+data_dir = ''
 CAPITAL_CITIES=['Sydney','Melbourne','Brisbane','Adelaide','Perth','Canberra','Hobart','Darwin']
 PROPERTY_TYPE=['Established House','Attached Dwelling']
 
