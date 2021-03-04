@@ -20,7 +20,7 @@ import matplotlib.pyplot as plt
 # from data.create_data import create_table
 
 #data_dir = 'C:/Users/sheld/OneDrive/Documents/PortfolioOpt/Data/'
-data_dir = ''
+data_dir = './Data/'
 CAPITAL_CITIES=['Sydney','Melbourne','Brisbane','Adelaide','Perth','Canberra','Hobart','Darwin']
 PROPERTY_TYPE=['Established House','Attached Dwelling']
 
