@@ -4,6 +4,7 @@ Created on Mon Mar  1 06:00:45 2021
 
 @author: sheld
 """
+import os
 import streamlit as st
 import pandas as pd
 # import plotly.express as px
@@ -21,7 +22,7 @@ import plotly.graph_objects as go
 # import numpy as np
 # from data.create_data import create_table
 
-data_dir = './'
+data_dir = os.getcwd()+'\\'
 CAPITAL_CITIES=['Sydney','Melbourne','Brisbane','Adelaide','Perth','Canberra','Hobart','Darwin']
 PROPERTY_TYPE=['House','Apartment/Unit']
 
