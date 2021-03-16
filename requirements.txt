@@ -1,0 +1,23 @@
+# This file may be used to create an environment using:
+# $ conda create --name <env> --file <this file>
+# platform: win-64
+
+
+matplotlib=3.3.4=pypi_0
+numpy=1.20.0=pypi_0
+numpy-base=1.19.2=py38ha3acd2a_0
+numpy-financial=1.0.0=pypi_0
+numpydoc=1.1.0=pyhd3eb1b0_1
+python=3.8.5=h5fd99cc_1
+python-dateutil=2.8.1=pyhd3eb1b0_0
+python-jsonrpc-server=0.4.0=py_0
+python-language-server=0.36.2=pyhd3eb1b0_0
+plotly=4.14.3=pypi_0
+streamlit=0.74.1=pypi_0
+yahoofinancials=1.6=pypi_0
+yaml=0.2.5=he774522_0
+yapf=0.30.0=py_0
+yfinance=0.1.55=pypi_0
+zeromq=4.3.3=ha925a31_3
+zipp=3.4.0=pyhd3eb1b0_0
+zlib=1.2.11=h62dcd97_4
