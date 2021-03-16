@@ -14,7 +14,7 @@ import datetime
 from datetime import datetime,timedelta
 from dateutil.relativedelta import relativedelta
 import numpy as np
-# import numpy_financial as npf
+import numpy_financial as npf
 import matplotlib.pyplot as plt
 from PIL import Image
 import plotly.graph_objects as go
