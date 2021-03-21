@@ -257,8 +257,8 @@ if st.button('Display Results!'):
     #     # legend_title_font_color="green"
     # )
     
-    st.plotly_chart(fig1,use_container_width=False)
-    st.plotly_chart(fig2,use_container_width=False)
+    st.plotly_chart(fig1,use_container_width=True)
+    st.plotly_chart(fig2,use_container_width=True)
     # st.plotly_chart(fig3,use_container_width=True)
     
 
