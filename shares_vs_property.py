@@ -187,6 +187,8 @@ if st.button('Display Results!'):
     'S&P 500': '{:,.2%}'.format,
     'Nasdaq': '{:,.2%}'.format,
     }))
+    
+    # st.line.chart()
 
     fig1 = go.Figure()
     fig1.add_trace(go.Scatter(x=df_sub['Date'], y=df_sub['Profit'],
@@ -198,6 +200,12 @@ if st.button('Display Results!'):
     fig1.add_trace(go.Scatter(x=df_sub['Date'], y=df_sub['Profit_Nasdaq'],
                         mode='lines', name='Nasdaq'))
     fig1.update_layout(
+            legend=dict(
+                yanchor="top",
+                y=0.99,
+                xanchor="left",
+                x=0.01
+            ),
             title={
             'text': 'Investment Profit over Time',
             'y':0.9,
@@ -217,9 +225,15 @@ if st.button('Display Results!'):
     #                     mode='lines',line = dict(color='firebrick', width=2 ,dash='dot'),
     #                     name='Median Price'))
     fig2.add_trace(go.Scatter(x=df_sub['Date'], y=df_sub['House_Price'],
-                        mode='lines+markers',line = dict(color='royalblue', width=3),
+                        mode='lines+markers',line = dict(color='royalblue', width=2),
                         name='Estimated Price'))
     fig2.update_layout(
+                 legend=dict(
+                yanchor="top",
+                y=0.99,
+                xanchor="left",
+                x=0.01
+            ),
         title={
             'text': 'Property Price Over Time',
             'y':0.9,
@@ -229,7 +243,8 @@ if st.button('Display Results!'):
     
     )
     
-
+    
+    
     # fig3 = go.Figure()
     # fig3.add_trace(go.Scatter(x=df_sub['Date'], y=df_sub['Profit_Property_Rate'],
     #                     mode='lines',
@@ -257,9 +272,56 @@ if st.button('Display Results!'):
     #     # legend_title_font_color="green"
     # )
     
+    fig4 = go.Figure()
+    # fig2.add_trace(go.Scatter(x=df_sub['Date'], y=df_sub[location],
+    #                     mode='lines',line = dict(color='firebrick', width=2 ,dash='dot'),
+    #                     name='Median Price'))
+    fig4.add_trace(go.Scatter(x=df_sub['Date'], y=df_sub['Nasdaq Close'],
+                        mode='lines+markers',line = dict(color='green', width=2),
+                        name='Estimated Price'))
+    fig4.update_layout(
+                 legend=dict(
+                yanchor="top",
+                y=0.99,
+                xanchor="left",
+                x=0.01
+            ),
+        title={
+            'text': 'Nasdaq ETF Adjusted Close Over Time',
+            'y':0.9,
+            'x':0.5,
+            'xanchor': 'center',
+            'yanchor': 'top'}
+    
+    )
+    
+    fig5 = go.Figure()
+    # fig2.add_trace(go.Scatter(x=df_sub['Date'], y=df_sub[location],
+    #                     mode='lines',line = dict(color='firebrick', width=2 ,dash='dot'),
+    #                     name='Median Price'))
+    fig5.add_trace(go.Scatter(x=df_sub['Date'], y=df_sub['sp500 Close'],
+                        mode='lines+markers',line = dict(color='red', width=2),
+                        name='Estimated Price'))
+    fig5.update_layout(
+                 legend=dict(
+                yanchor="top",
+                y=0.99,
+                xanchor="left",
+                x=0.01
+            ),
+        title={
+            'text': 'S&P500 ETF Adjusted Close Over Time',
+            'y':0.9,
+            'x':0.5,
+            'xanchor': 'center',
+            'yanchor': 'top'}
+    
+    )
+    
     st.plotly_chart(fig1,use_container_width=True)
     st.plotly_chart(fig2,use_container_width=True)
-    # st.plotly_chart(fig3,use_container_width=True)
+    st.plotly_chart(fig4,use_container_width=True)
+    st.plotly_chart(fig5,use_container_width=True)
     
 
 
