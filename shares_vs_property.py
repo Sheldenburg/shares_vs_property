@@ -200,6 +200,9 @@ if st.button('Display Results!'):
     fig1.add_trace(go.Scatter(x=df_sub['Date'], y=df_sub['Profit_Nasdaq'],
                         mode='lines', name='Nasdaq'))
     fig1.update_layout(
+            autosize=False,
+            # width=300,
+            height=450,
             legend=dict(
                 yanchor="top",
                 y=0.99,
@@ -211,7 +214,14 @@ if st.button('Display Results!'):
             'y':0.9,
             'x':0.5,
             'xanchor': 'center',
-            'yanchor': 'top'}
+            'yanchor': 'top'},
+                margin=dict(
+                l=5,
+                r=5,
+                b=5,
+                t=70,
+                pad=0
+            ),
         # title='Investment Profit over Time'
         # font_family="Courier New",
         # font_color="blue",
@@ -225,7 +235,7 @@ if st.button('Display Results!'):
     #                     mode='lines',line = dict(color='firebrick', width=2 ,dash='dot'),
     #                     name='Median Price'))
     fig2.add_trace(go.Scatter(x=df_sub['Date'], y=df_sub['House_Price'],
-                        mode='lines+markers',line = dict(color='royalblue', width=2),
+                        mode='lines',line = dict(color='royalblue', width=2),
                         name='Estimated Price'))
     fig2.update_layout(
                  legend=dict(
@@ -239,7 +249,14 @@ if st.button('Display Results!'):
             'y':0.9,
             'x':0.5,
             'xanchor': 'center',
-            'yanchor': 'top'}
+            'yanchor': 'top'},
+             margin=dict(
+            l=5,
+            r=5,
+            b=5,
+            t=70,
+            pad=0
+        ),
     
     )
     
@@ -277,7 +294,7 @@ if st.button('Display Results!'):
     #                     mode='lines',line = dict(color='firebrick', width=2 ,dash='dot'),
     #                     name='Median Price'))
     fig4.add_trace(go.Scatter(x=df_sub['Date'], y=df_sub['Nasdaq Close'],
-                        mode='lines+markers',line = dict(color='green', width=2),
+                        mode='lines',line = dict(color='green', width=2),
                         name='Estimated Price'))
     fig4.update_layout(
                  legend=dict(
@@ -291,7 +308,14 @@ if st.button('Display Results!'):
             'y':0.9,
             'x':0.5,
             'xanchor': 'center',
-            'yanchor': 'top'}
+            'yanchor': 'top'},
+                 margin=dict(
+                l=5,
+                r=5,
+                b=5,
+                t=70,
+                pad=0
+            ),
     
     )
     
@@ -300,7 +324,7 @@ if st.button('Display Results!'):
     #                     mode='lines',line = dict(color='firebrick', width=2 ,dash='dot'),
     #                     name='Median Price'))
     fig5.add_trace(go.Scatter(x=df_sub['Date'], y=df_sub['sp500 Close'],
-                        mode='lines+markers',line = dict(color='red', width=2),
+                        mode='lines',line = dict(color='red', width=2),
                         name='Estimated Price'))
     fig5.update_layout(
                  legend=dict(
@@ -314,7 +338,14 @@ if st.button('Display Results!'):
             'y':0.9,
             'x':0.5,
             'xanchor': 'center',
-            'yanchor': 'top'}
+            'yanchor': 'top'},
+                 margin=dict(
+                l=5,
+                r=5,
+                b=5,
+                t=70,
+                pad=0
+            ),
     
     )
     
