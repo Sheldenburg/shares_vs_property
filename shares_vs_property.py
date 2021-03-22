@@ -349,11 +349,41 @@ if st.button('Display Results!'):
     
     )
     
+    fig6 = go.Figure()
+    # fig2.add_trace(go.Scatter(x=df_sub['Date'], y=df_sub[location],
+    #                     mode='lines',line = dict(color='firebrick', width=2 ,dash='dot'),
+    #                     name='Median Price'))
+    fig6.add_trace(go.Scatter(x=df_sub['Date'], y=df_sub['Rental'],
+                        mode='lines',line = dict(color='orange', width=2),
+                        name='Estimated Price'))
+    fig6.update_layout(
+                 legend=dict(
+                yanchor="top",
+                y=0.99,
+                xanchor="left",
+                x=0.01
+            ),
+        title={
+            'text': 'Rent/week (adjusted by inflation) Over Time',
+            'y':0.9,
+            'x':0.5,
+            'xanchor': 'center',
+            'yanchor': 'top'},
+                 margin=dict(
+                l=5,
+                r=5,
+                b=5,
+                t=70,
+                pad=0
+            ),
+    
+    )
+    
     st.plotly_chart(fig1,use_container_width=True)
     st.plotly_chart(fig2,use_container_width=True)
     st.plotly_chart(fig4,use_container_width=True)
     st.plotly_chart(fig5,use_container_width=True)
-    
+    st.plotly_chart(fig6,use_container_width=True)
 
 
 # st.write(df_sub)
