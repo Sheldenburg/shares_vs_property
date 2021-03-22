@@ -385,6 +385,8 @@ if st.button('Display Results!'):
     st.plotly_chart(fig5,use_container_width=True)
     st.plotly_chart(fig6,use_container_width=True)
 
-
+link = '[This App is Designed by Money Recreation](https://moneyrecreation.com/)'
+st.markdown(link, unsafe_allow_html=True)
+st.text('Email: info@moneyrecreation.com')
 # st.write(df_sub)
 
